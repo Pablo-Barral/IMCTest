@@ -7,7 +7,7 @@ export default function imc(){
     const resultBox = document.querySelector('#result')
 
     calculate.addEventListener("click", ()=>{
-        let imc = weight.value + (height.value * height.value)
+        let imc = weight.value / (height.value * height.value)
         imc = parseFloat(imc).toFixed(1)
         let resultText = result(imc)
         resultBox.innerHTML = `IMC: ${imc} (${resultText})`
